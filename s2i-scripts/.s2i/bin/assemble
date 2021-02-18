@@ -4,13 +4,13 @@ set -e
 
 source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
 
-echo "---> Enabling s2i support in httpd24 image"
+echo "---> Starting Efinance custom assemble file "
 
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-echo "---> Installing application source"
+echo "---> Installing Efinaince application source "
 cp -Rf /tmp/src/*.html ./
 
 DATE=`date "+%b %d, %Y @ %H:%M %p"`
@@ -39,3 +39,11 @@ fi
 
 # Fix source directory permissions
 fix-permissions ./
+echo "Efinance built their own image now it is ready"
+echo "_____________=======================___________________"
+echo "_____________=======================___________________"
+echo "_____________=======================___________________"
+sleep 10
+echo "_____________=======================___________________"
+echo "_____________=======================___________________"
+echo "_____________=======================___________________"
